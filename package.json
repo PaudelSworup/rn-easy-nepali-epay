@@ -1,0 +1,55 @@
+{
+  "name": "rn-easy-nepali-epay",
+  "version": "1.0.0",
+  "main": "lib\\commonjs\\index.js",
+  "types": "lib\\typescript\\src\\index.d.ts",
+  "scripts": {
+    "build": "npx tsc --project ./tsconfig.json",
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint --fix -p ./tsconfig.json",
+    "prepare": "bob build"
+  },
+  "keywords": [
+    "rn-easy-nepali-payment"
+  ],
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native": ">=0.73.0",
+    "react-native-webview": ">=11.6.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaudelSworup/rn-easy-nepali-epay"
+  },
+  "author": "Sworup KC <Sworupkc9@gmail.com> (http://sworup-kc.vercel.app)",
+  "license": "MIT",
+  "description": "React native component to add Nepali payment Esewa and khalti in your app",
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/react": "^18.2.56",
+    "react-native-builder-bob": "^0.23.2"
+  },
+  "react-native": "src\\index.ts",
+  "source": "src\\index.ts",
+  "module": "lib\\module\\index.js",
+  "files": [
+    "src",
+    "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
+}
